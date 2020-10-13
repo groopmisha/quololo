@@ -20,6 +20,7 @@ $_['text_add']					= 'Neu';
 $_['text_edit']					= 'Bearbeiten';
 $_['text_filter']				= 'Filter';
 
+
 // < 3.1.x
 $_['text_plus']					= '+';
 $_['text_minus']				= '-';
@@ -92,6 +93,7 @@ $_['entry_tag']					= 'Suchbegriffe';
 $_['entry_reward']				= 'Bonuspunkte';
 $_['entry_layout']				= 'Layout überschreiben';
 $_['entry_recurring']			= 'Abozahlung';
+$_['entry_main_category']       = 'Main category:';
 
 // < 3.1.x
 $_['entry_option_points']		= 'Punkte';

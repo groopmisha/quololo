@@ -1198,6 +1198,50 @@
                   </div>
                 </div>
                 <div class="form-group">
+                  <label class="col-sm-2 control-label" for="config_seo_url_type">{{ entry_seo_url_type }}</label>
+                  <div class="col-sm-10">
+                  <select id="config_seo_url_type" class="form-control" name="config_seo_url_type">
+                    {% for seo_type in seo_types %}
+                      {% if seo_type.type == config_seo_url_type %}
+                        <option value="{{ seo_type.type }}" selected="selected">{{ seo_type.name }}</option>
+                      {% else %}
+                        <option value="{{ seo_type.type }}">{{ seo_type.name }}</option>
+                      {% endif %}
+                    {% endfor %}
+                  </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label"><span data-toggle="tooltip" title="{{ entry_seo_url_include_path_help }}">{{ entry_seo_url_include_path }}</span></label>
+                  <div class="col-sm-10">
+                  {% if config_seo_url_include_path %}
+                    <label class="radio-inline">
+                    <input type="radio" name="config_seo_url_include_path" value="1" checked="checked"/>
+                    {{ text_yes }}
+                    </label>
+                    <label class="radio-inline">
+                    <input type="radio" name="config_seo_url_include_path" value="0"/>
+                    {{ text_no }}
+                    </label>
+                  {% else %}
+                    <label class="radio-inline">
+                    <input type="radio" name="config_seo_url_include_path" value="1"/>
+                    {{ text_yes }}
+                    </label>
+                    <label class="radio-inline">
+                    <input type="radio" name="config_seo_url_include_path" value="0" checked="checked"/>
+                    {{ text_no }}
+                    </label>
+                  {% endif %}
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="config_seo_url_postfix"><span data-toggle="tooltip" title="{{ entry_seo_url_postfix_help }}">{{ entry_seo_url_postfix }}</span></label>
+                  <div class="col-sm-10">
+                  <input type="text" name="config_seo_url_postfix" value="{{ config_seo_url_postfix }}" id="config_seo_url_postfix" class="form-control"/>
+                  </div>
+                </div>
+                <div class="form-group">
                   <label class="col-sm-2 control-label" for="input-robots"><span data-toggle="tooltip" title="{{ help_robots }}">{{ entry_robots }}</span></label>
                   <div class="col-sm-10">
                     <textarea name="config_robots" rows="5" placeholder="{{ entry_robots }}" id="input-robots" class="form-control">{{ config_robots }}</textarea>

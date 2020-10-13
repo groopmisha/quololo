@@ -874,6 +874,14 @@ class ControllerCatalogProduct extends Controller {
 			$categories = array();
 		}
 
+		if (isset($this->request->post['main_category_id'])) {
+			$data['main_category_id'] = $this->request->post['main_category_id'];
+		} elseif (isset($product_info)) {
+			$data['main_category_id'] = $this->model_catalog_product->getProductMainCategoryId($this->request->get['product_id']);
+		} else {
+			$data['main_category_id'] = 0;
+		}
+
 		$data['product_categories'] = array();
 
 		foreach ($categories as $category_id) {

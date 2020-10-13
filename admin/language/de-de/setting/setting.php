@@ -40,6 +40,13 @@ $_['text_general']				= 'Allgemein';
 $_['text_security']				= 'Sicherheit';
 $_['text_upload']				= 'Uploads';
 $_['text_error']				= 'Fehlerbehandlung';
+$_['text_seo_url']					   = 'Default';
+$_['text_seo_pro']					   = 'SEO PRO';
+$_['entry_seo_url_type']			   = 'SEO type:';
+$_['entry_seo_url_include_path']	   = 'SEO with categories:';
+$_['entry_seo_url_include_path_help']  = '/category/subcategory/product';
+$_['entry_seo_url_postfix']			   = 'SEO postfix';
+$_['entry_seo_url_postfix_help']	   = 'Example as .html';
 
 // Entry
 $_['entry_meta_title']			= 'Metatag - Titel';
