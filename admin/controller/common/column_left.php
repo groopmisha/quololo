@@ -146,6 +146,14 @@ class ControllerCommonColumnLeft extends Controller {
 					'children' => array()		
 				);					
 			}	
+
+			if ($this->user->hasPermission('access', 'extension/module/custom')) {		
+				$marketplace[] = array(
+					'name'	   => $this->language->get('text_module_custom'),
+					'href'     => $this->url->link('extension/module/custom', 'user_token=' . $this->session->data['user_token'], true),
+					'children' => array()
+				);
+			}
 			
 			if ($this->user->hasPermission('access', 'marketplace/extension')) {		
 				$marketplace[] = array(

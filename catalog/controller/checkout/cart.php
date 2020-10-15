@@ -1,6 +1,9 @@
 <?php
 class ControllerCheckoutCart extends Controller {
 	public function index() {
+
+		$this->response->redirect($this->url->link('extension/module/custom'));
+
 		$this->load->language('checkout/cart');
 
 		$this->document->setTitle($this->language->get('heading_title'));

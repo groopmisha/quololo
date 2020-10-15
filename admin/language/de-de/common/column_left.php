@@ -46,6 +46,7 @@ $_['text_marketing']				= 'Werbung';
 $_['text_marketplace']				= 'Marktplatz';
 $_['text_maintenance']				= 'Wartung';
 $_['text_menu']						= 'Menüverwaltung';
+$_['text_module_custom']            = 'Custom Checkout';
 $_['text_modification']				= 'Anpassungen';
 $_['text_manufacturer']				= 'Hersteller';
 $_['text_navigation']				= 'Navigation';

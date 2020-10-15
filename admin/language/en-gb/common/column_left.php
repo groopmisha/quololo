@@ -35,6 +35,7 @@ $_['text_marketing']            = 'Marketing';
 $_['text_marketplace']          = 'Marketplace';
 $_['text_maintenance']          = 'Maintenance';
 $_['text_menu']                 = 'Menu Manager';
+$_['text_module_custom']        = 'Custom Checkout';
 $_['text_modification']         = 'Modifications';
 $_['text_manufacturer']         = 'Manufacturers';
 $_['text_navigation']           = 'Navigation';
