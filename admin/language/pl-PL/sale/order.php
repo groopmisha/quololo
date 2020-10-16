@@ -1,0 +1,132 @@
+<?php
+// Heading
+$_['heading_title']              = 'Zamówienia';
+
+// Text
+$_['text_success']               = 'Sukces: masz zmodyfikowane zamówienia!';
+$_['text_list']                  = 'Lista zamówień';
+$_['text_add']                   = 'Dodaj zamówienie';
+$_['text_edit']                  = 'Edytuj zamówienie';
+$_['text_filter']                = 'Filtr';
+$_['text_order_detail']          = 'Szczegóły zamówienia';
+$_['text_customer_detail']       = 'Dane klienta';
+$_['text_option']                = 'Opcje';
+$_['text_store']                 = 'Sklepie';
+$_['text_date_added']            = 'Data dodania';
+$_['text_payment_method']        = 'Metoda płatności';
+$_['text_shipping_method']       = 'Metoda wysyłki';
+$_['text_customer']              = 'Klienta';
+$_['text_customer_group']        = 'Grupa klientów';
+$_['text_email']                 = 'E-mail';
+$_['text_telephone']             = 'Telefon';
+$_['text_fax']                   = 'Faksu';
+$_['text_invoice']               = 'Faktury';
+$_['text_reward']                = 'Punkty lojalnościowe';
+$_['text_affiliate']             = 'Partnerski';
+$_['text_order']                 = 'Zamówienia (#%s)';
+$_['text_payment_address']       = 'Adres płatności';
+$_['text_shipping_address']      = 'Adres wysyłkowy';
+$_['text_comment']               = 'Komentarz klienta';
+$_['text_history']               = 'Historia zamówień';
+$_['text_history_add']           = 'Dodaj historię zamówień';
+$_['text_account_custom_field']  = 'Pola niestandardowe konta';
+$_['text_payment_custom_field']  = 'Pola niestandardowe adresu płatności';
+$_['text_shipping_custom_field'] = 'Pola niestandardowe adresu wysyłkowego';
+$_['text_browser']               = 'Przeglądarka';
+$_['text_ip']                    = 'Adres IP';
+$_['text_forwarded_ip']          = 'Przekazane IP';
+$_['text_user_agent']            = 'User Agent';
+$_['text_accept_language']       = 'Akceptuję język';
+$_['text_order_id']              = 'Identyfikator zamówienia:';
+$_['text_website']               = 'Witryna sieci Web:';
+$_['text_invoice_no']            = 'Nr faktury';
+$_['text_invoice_date']          = 'Data faktury:';
+$_['text_sku']                   = 'Numer jednostki magazynowej:';
+$_['text_upc']                   = 'Upc:';
+$_['text_ean']                   = 'Ean:';
+$_['text_jan']                   = 'Jan:';
+$_['text_isbn']                  = 'Isbn:';
+$_['text_mpn']                   = 'Mpn:';
+$_['text_missing']               = 'Brakujące zamówienia';
+$_['text_default']               = 'Domyślny';
+$_['text_product']               = 'Dodaj produkt (y)';
+$_['text_voucher']               = 'Dodaj voucher (y)';
+$_['text_shipping']              = 'Wysyłki';
+$_['text_contact']               = 'Kontakt';
+$_['text_reward_added']          = 'Sukces: Nagroda punkty dodane!';
+$_['text_reward_removed']        = 'Sukces: nagrody punkty usunięte!';
+$_['text_commission_added']      = 'Sukces: Komisja dodała!';
+$_['text_commission_removed']    = 'Sukces: Komisja usunęła!';
+$_['text_restock']               = 'Sukces: produkty zostały uzupełniane!';
+$_['text_upload']                = 'Twój plik został pomyślnie przesłane!';
+$_['text_picklist']              = 'Notatka wysyłkowa';
+
+// Column
+$_['column_order_id']            = 'Identyfikator zamówienia';
+$_['column_customer']            = 'Klienta';
+$_['column_status']              = 'Stan';
+$_['column_date_added']          = 'Data dodania';
+$_['column_date_modified']       = 'Data modyfikacji';
+$_['column_total']               = 'Łącznych';
+$_['column_product']             = 'Produktu';
+$_['column_model']               = 'Modelu';
+$_['column_quantity']            = 'Ilość';
+$_['column_price']               = 'Cena jednostkowa';
+$_['column_comment']             = 'Komentarz';
+$_['column_notify']              = 'Powiadomienie klienta';
+$_['column_location']            = 'Lokalizacji';
+$_['column_reference']           = 'Odwołanie';
+$_['column_action']              = 'Działania';
+$_['column_weight']              = 'Waga produktu';
+
+// Entry
+$_['entry_store']                = 'Sklepie';
+$_['entry_customer']             = 'Klienta';
+$_['entry_customer_group']       = 'Grupa klientów';
+$_['entry_firstname']            = 'Imię';
+$_['entry_lastname']             = 'Nazwisko';
+$_['entry_email']                = 'E-mail';
+$_['entry_telephone']            = 'Telefon';
+$_['entry_address']              = 'Wybierz adres';
+$_['entry_company']              = 'Firmy';
+$_['entry_address_1']            = 'Adres 1';
+$_['entry_address_2']            = 'Adres 2';
+$_['entry_city']                 = 'Miasta';
+$_['entry_postcode']             = 'Kodów pocztowych';
+$_['entry_country']              = 'Kraju';
+$_['entry_zone']                 = 'Region/województwo';
+$_['entry_zone_code']            = 'Kod regionu/województwa';
+$_['entry_product']              = 'Wybierz produkt';
+$_['entry_option']               = 'Wybierz opcje';
+$_['entry_quantity']             = 'Ilość';
+$_['entry_to_name']              = 'Nazwa odbiorcy';
+$_['entry_to_email']             = 'E-mail adresata';
+$_['entry_from_name']            = 'Imię i nazwisko nadawcy';
+$_['entry_from_email']           = 'E-mail nadawcy';
+$_['entry_theme']                = 'Kompozycja talonów';
+$_['entry_message']              = 'Komunikat';
+$_['entry_amount']               = 'Kwota';
+$_['entry_affiliate']            = 'Partnerski';
+$_['entry_order_status']         = 'Status zamówienia';
+$_['entry_notify']               = 'Powiadomić klienta';
+$_['entry_override']             = 'Zastąpić';
+$_['entry_comment']              = 'Komentarz';
+$_['entry_currency']             = 'Waluty';
+$_['entry_shipping_method']      = 'Metoda wysyłki';
+$_['entry_payment_method']       = 'Metoda płatności';
+$_['entry_coupon']               = 'Kupon';
+$_['entry_voucher']              = 'Kupon';
+$_['entry_reward']               = 'Nagroda';
+$_['entry_order_id']             = 'Identyfikator zamówienia';
+$_['entry_total']                = 'Łącznych';
+$_['entry_date_added']           = 'Data dodania';
+$_['entry_date_modified']        = 'Data modyfikacji';
+
+// Help
+$_['help_override']              = 'Jeśli kolejność klientów jest zablokowana ze zmiany stanu zamówienia z powodu nadużyć finansowych rozszerzenia włączyć override.';
+
+// Error
+$_['error_warning']              = 'Uwaga: Proszę sprawdzić uważnie formularz pod kątem błędów!';
+$_['error_permission']           = 'Ostrzeżenie: nie masz uprawnień do modyfikowania zamówień!';
+$_['error_action']               = 'Ostrzeżenie: nie można ukończyć tej akcji!';
+$_['error_filetype']             = 'Nieprawidłowy typ pliku!';
