@@ -1,0 +1,39 @@
+// Core, variables, mixins, functions --->
+@import "scss/variables";
+@import "scss/mixins";
+
+// Global stylesheet --->
+@import "scss/global";
+
+// Bootstrap Grid System --->
+@import "scss/grid";
+
+// UI Small elements like rating, button, etc... -->
+@import "scss/ui/icon";
+@import "scss/ui/buttons";
+
+// Plugins
+@import "scss/plugins/swiper";
+@import "scss/plugins/lightslider";
+
+// Bigger element --->
+@import "scss/blocks/forms";
+@import "scss/blocks/components";
+@import "scss/blocks/table";
+
+// Site Layout --->
+@import "scss/header";
+@import "scss/footer";
+
+// Pages --->
+@import "scss/pages/other";
+@import "scss/pages/cart";
+
+
+
+
+
+
+
+
+

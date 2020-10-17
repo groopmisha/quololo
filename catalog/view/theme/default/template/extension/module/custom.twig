@@ -20,73 +20,61 @@
 			</div>
 			{% endif %}
 
-			<div class="cart__form">
+			<div class="cart__totals">
+				{% if module %} 
+					<div id="custom-module" class="cart__modules">{{ module }}</div>
+				{% endif %} 
+				{% if total %} 
+					<div class="cart__total table table--cart" id="custom-total">{{ total }}</div>
+				{% endif %} 
+			</div>
 
-				<div class="cart__column">
-		
-					{% if login and not logged %} 
-						<div id="custom-login">{{ login }}</div>
-					{% endif %} 
-		
-					{% if customer and not logged %} 
-						<div id="custom-customer">{{ customer }}</div>
-					{% endif %} 
-		
-					{% if payment %} 
-						<div id="custom-payment">{{ payment }}</div>
-					{% endif %}	
-		
-					{% if comment and comment != constant('false') %} 
-						<div id="custom-comment">{{ comment }}</div>
-					{% endif %} 
-		
-				</div>
-		
-				<div class="cart__column">
-					
-					{% if module %} 
-						<div id="custom-module">{{ module }}</div>
-					{% endif %} 
-		
-					{% if total %} 
-						<div id="custom-total">{{ total }}</div>
-					{% endif %} 
+			{% if login and not logged %} 
+			<div id="custom-login" class="cart__choose">{{ login }}</div>
+			{% endif %} 
 
+			{% if customer and not logged %} 
+				<div id="custom-customer" class="cart__customer">{{ customer }}</div>
+			{% endif %} 
+
+			<div class="cart__details">
+				<div class="cart__shipping">
 					{% if shipping and shipping != constant('false') %} 
 						<div id="custom-shipping">{{ shipping }}</div>
 					{% endif %} 
-		
 				</div>
-		
+				<div class="cart__payment">
+					{% if payment %} 
+						<div id="custom-payment">{{ payment }}</div>
+					{% endif %}	
+					{% if comment and comment != constant('false') %} 
+						<div id="custom-comment" class="cart__comment">{{ comment }}</div>
+					{% endif %} 
+				</div>
 			</div>
-		
+
 			{% if payment %} 
-				{% if text_agree %} 
-					<div class="buttons" id="custom-control">
-					  <div class="pull-right">{{ text_agree }} 
-						{% if (agree) %} 
-						<input type="checkbox" name="agree" value="1" checked="checked" />
-						{% else %} 
-						<input type="checkbox" name="agree" value="1" />
-						{% endif %} 
-						&nbsp;
-						<input type="button" value="{{ button_continue }}" id="button-custom-order" data-loading-text="{{ text_loading }}" class="btn btn-primary" style="display: block!important"/>
-					  </div>
-					  <div class="clearfix"></div>
-					</div>
-					{% else %} 
-					<div class="buttons">
-					  <div class="pull-right">
-						<input type="button" value="{{ button_continue }}" id="button-custom-order" data-loading-text="{{ text_loading }}" class="btn btn-primary" style="display: block!important" />
-					  </div>
-					  <div class="clearfix"></div>
-					</div>
+			{% if text_agree %} 
+			<div class="cart__buttons buttons" id="custom-control">
+				<label for="agree">
+					{{ text_agree }} 
+				</label>
+				{% if (agree) %} 
+				<input id="agree" type="checkbox" name="agree" value="1" checked="checked" />
+				{% else %} 
+				<input id="agree" type="checkbox" name="agree" value="1" />
 				{% endif %} 
+				<input type="button" value="{{ button_continue }}" id="button-custom-order" data-loading-text="{{ text_loading }}" class="btn__primary" style="display: block!important"/>
+				<span></span>
+			</div>
+			{% else %} 
+			<div class="cart__buttons buttons">
+				<input type="button" value="{{ button_continue }}" id="button-custom-order" data-loading-text="{{ text_loading }}" class="btn__primary" style="display: block!important" />
+			</div>
+			{% endif %} 
 			{% endif %}	
 		
-			{{ content_bottom }}
-		
-			<div id="custom-confirm" style="display: none;"></div>
+			<div id="custom-confirm" class="cart__paypal" style="display: none;"></div>
 
 		</main>
 
@@ -97,12 +85,10 @@
 {{ footer }}
 
 <script>
+
 	$(document).ready(function() {
-
-	$('#button-custom-order').on('click', function(){
-
-		{% if (not logged) %} 
-
+		$('#button-custom-order').on('click', function(){
+			{% if (not logged) %} 
 				checkoutCustomer()
 					{% if (login is defined and login != constant('false')) %} 
 						.then( checkoutLogin )
@@ -114,37 +100,27 @@
 					{% if (comment is defined and comment != constant('false')) %} 
 						.then( checkoutComment )
 					{% endif %} 
-						.then( checkoutConfirm )
-						.catch( failureCallback );
-
-		{% else %} 
-
-			{% if (shipping is defined and shipping != constant('false')) %} 
-
-				checkoutShipping()
-					.then( checkoutPayment )
-					{% if (comment is defined and comment != constant('false')) %} 
-						.then( checkoutComment )
-					{% endif %} 
 					.then( checkoutConfirm )
 					.catch( failureCallback );
-
 			{% else %} 
-
-				checkoutPayment()
-					{% if (comment is defined and comment != constant('false')) %} 
-							.then( checkoutComment )
+				{% if (shipping is defined and shipping != constant('false')) %} 
+					checkoutShipping()
+						.then( checkoutPayment )
+						{% if (comment is defined and comment != constant('false')) %} 
+						.then( checkoutComment )
 						{% endif %} 
 						.then( checkoutConfirm )
-						.catch( ailureCallback );
-
-
-			{% endif %}	
-
-		{% endif %} 
-
-	});
-
+						.catch( failureCallback );
+				{% else %} 
+					checkoutPayment()
+						{% if (comment is defined and comment != constant('false')) %} 
+						.then( checkoutComment )
+						{% endif %} 
+						.then( checkoutConfirm )
+						.catch( failureCallback );
+				{% endif %}	
+			{% endif %} 
+		});
 	});
   
 </script>

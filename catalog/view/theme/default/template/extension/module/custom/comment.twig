@@ -1,5 +1,6 @@
-<h2>{{ heading_comment }}</h2>
-<div class="form-group">
-	<label class="control-label" for="input-comment">{{ entry_comment }}</label>
-	<textarea name="comment" rows="5" placeholder="{{ entry_comment }}" id="input-comment" class="form-control">{{ comment }}</textarea>
+<div class="form form--comment">
+	<div class="form__heading">{{ heading_comment }}</div>
+	<div class="form__item form__item--comment form-group">
+		<textarea name="comment" placeholder="{{ entry_comment }}" id="input-comment" class="form-control">{{ comment }}</textarea>
+	</div>
 </div>

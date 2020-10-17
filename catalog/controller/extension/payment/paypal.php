@@ -43,7 +43,7 @@ class ControllerExtensionPaymentPayPal extends Controller {
 		}
 		
 		$data['button_align'] = $setting['checkout']['express']['button_align'];
-		$data['button_size'] = $setting['checkout']['express']['button_size'];
+		$data['button_size'] = small;
 		$data['button_color'] = $setting['checkout']['express']['button_color'];
 		$data['button_shape'] = $setting['checkout']['express']['button_shape'];
 		$data['button_label'] = $setting['checkout']['express']['button_label'];
