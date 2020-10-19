@@ -17,18 +17,19 @@
 {% if keywords %}
 <meta name="keywords" content="{{ keywords }}" />
 {% endif %}
-<script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
-<link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
-<script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">
+<script src="catalog/view/theme/default/assets/js/jquery.min.js"></script>
+<script src="catalog/view/theme/default/assets/js/popper.js"></script>
+<script src="catalog/view/theme/default/assets/js/bootstrap.min.js"></script>
+<link href="catalog/view/theme/default/assets/bootstrap.min.css" rel="stylesheet" media="screen" />
+<link href="catalog/view/theme/default/assets/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="catalog/view/theme/default/assets/plugins.css" rel="stylesheet">
+<link href="catalog/view/theme/default/assets/stylesheet.css" rel="stylesheet">
 {% for style in styles %}
 <link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
 {% endfor %}
 {% for script in scripts %}
 <script src="{{ script }}" type="text/javascript"></script>
 {% endfor %}
-<script src="catalog/view/javascript/common.js" type="text/javascript"></script>
 {% for link in links %}
 <link href="{{ link.href }}" rel="{{ link.rel }}" />
 {% endfor %}
@@ -36,45 +37,80 @@
 {{ analytic }}
 {% endfor %}
 </head>
-<body>
-<nav id="top">
-  <div class="container">{{ currency }}
-    {{ language }}
-    <div id="top-links" class="nav pull-right">
-      <ul class="list-inline">
-        <li><a href="{{ contact }}"><i class="fa fa-phone"></i></a> <span class="hidden-xs hidden-sm hidden-md">{{ telephone }}</span></li>
-        <li class="dropdown"><a href="{{ account }}" title="{{ text_account }}" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md">{{ text_account }}</span> <span class="caret"></span></a>
-          <ul class="dropdown-menu dropdown-menu-right">
-            {% if logged %}
-            <li><a href="{{ account }}">{{ text_account }}</a></li>
-            <li><a href="{{ order }}">{{ text_order }}</a></li>
-            <li><a href="{{ transaction }}">{{ text_transaction }}</a></li>
-            <li><a href="{{ download }}">{{ text_download }}</a></li>
-            <li><a href="{{ logout }}">{{ text_logout }}</a></li>
-            {% else %}
-            <li><a href="{{ register }}">{{ text_register }}</a></li>
-            <li><a href="{{ login }}">{{ text_login }}</a></li>
-            {% endif %}
-          </ul>
-        </li>
-        <li><a href="{{ wishlist }}" id="wishlist-total" title="{{ text_wishlist }}"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm hidden-md">{{ text_wishlist }}</span></a></li>
-        <li><a href="{{ shopping_cart }}" title="{{ text_shopping_cart }}"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">{{ text_shopping_cart }}</span></a></li>
-        <li><a href="{{ checkout }}" title="{{ text_checkout }}"><i class="fa fa-share"></i> <span class="hidden-xs hidden-sm hidden-md">{{ text_checkout }}</span></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<header>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        <div id="logo">{% if logo %}<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>{% else %}
-          <h1><a href="{{ home }}">{{ name }}</a></h1>
-          {% endif %}</div>
-      </div>
-      <div class="col-sm-5">{{ search }}</div>
-      <div class="col-sm-3">{{ cart }}</div>
-    </div>
-  </div>
-</header>
-{{ menu }}
+
+<body class="main-wrapper home-2">
+    <header class="header">
+        <div class="header-top bg-grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 order-lg-1 col-md-5 order-1">
+                        <div class="top-selector-wrapper">
+                            <div class="single-top-selector-left">
+                                {{ currency }}
+                                {{ language }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 order-lg-2 col-md-12">
+                        <div class="logo text-center">
+                            {% if logo %}
+                            <a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>
+                            {% else %}
+                            <h1><a href="{{ home }}">{{ name }}</a></h1>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="col-lg-4 order-lg-3 col-lg-4 col-md-7 order-2">
+                        <div class="header-bottom-right">
+                            <ul class="single-setting-selector">
+                                <li class="setting-top list-inline-item">
+                                    <div class="btn-group dropdown">
+                                        <button class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle-o"></i> Setting <i class="fa fa-angle-down"></i></button>
+                                        <ul class="dropdown-menu dropdown-menu-left">
+                                            {% if logged %}
+                                            <li><a href="{{ account }}">{{ text_account }}</a></li>
+                                            <li><a href="{{ order }}">{{ text_order }}</a></li>
+                                            <li><a href="{{ transaction }}">{{ text_transaction }}</a></li>
+                                            <li><a href="{{ download }}">{{ text_download }}</a></li>
+                                            <li><a href="{{ logout }}">{{ text_logout }}</a></li>
+                                            {% else %}
+                                            <li><a href="{{ register }}">{{ text_register }}</a></li>
+                                            <li><a href="{{ login }}">{{ text_login }}</a></li>
+                                            {% endif %}
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="block-search">
+                                <div class="trigger-search"><i class="fa fa-search"></i> <span>Search</span></div>
+                                {{ search }}
+                            </div>
+                            <div class="shoping-cart">
+                                {{ cart }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom-area bg-grey header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 d-none d-lg-block">
+                        <div class="main-menu-area text-center">
+                         {{ menu }}
+                        </div>
+                    </div>
+                    <div class="col">
+                        <!-- mobile-menu start -->
+                        <div class="mobile-menu d-block d-lg-none"></div>
+                        <!-- mobile-menu end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+

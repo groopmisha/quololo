@@ -7,7 +7,6 @@ class ControllerExtensionModuleBanner extends Controller {
 		$this->load->model('tool/image');
 
 		$this->document->addStyle('catalog/view/javascript/jquery/swiper/css/swiper.min.css');
-		$this->document->addStyle('catalog/view/javascript/jquery/swiper/css/opencart.css');
 		$this->document->addScript('catalog/view/javascript/jquery/swiper/js/swiper.jquery.js');
 
 		$data['banners'] = array();

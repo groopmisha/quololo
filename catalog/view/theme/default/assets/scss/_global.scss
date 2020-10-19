@@ -1,0 +1,606 @@
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/poppins-v13-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Poppins Regular'), local('Poppins-Regular'),
+       url('fonts/poppins-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/poppins-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/poppins-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/poppins-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/poppins-v13-latin-regular.svg#Poppins') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts/poppins-v13-latin-500.eot'); /* IE9 Compat Modes */
+  src: local('Poppins Medium'), local('Poppins-Medium'),
+       url('fonts/poppins-v13-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/poppins-v13-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/poppins-v13-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('fonts/poppins-v13-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/poppins-v13-latin-500.svg#Poppins') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/poppins-v13-latin-600.eot'); /* IE9 Compat Modes */
+  src: local('Poppins SemiBold'), local('Poppins-SemiBold'),
+       url('fonts/poppins-v13-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/poppins-v13-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/poppins-v13-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('fonts/poppins-v13-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/poppins-v13-latin-600.svg#Poppins') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/poppins-v13-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Poppins Bold'), local('Poppins-Bold'),
+       url('fonts/poppins-v13-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/poppins-v13-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/poppins-v13-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('fonts/poppins-v13-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/poppins-v13-latin-700.svg#Poppins') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+    src: url('fonts/roboto/roboto-v19-cyrillic_latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Roboto'), local('Roboto-Regular'),
+         url('fonts/roboto/roboto-v19-cyrillic_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/roboto/roboto-v19-cyrillic_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/roboto/roboto-v19-cyrillic_latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('fonts/roboto/roboto-v19-cyrillic_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/roboto/roboto-v19-cyrillic_latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: auto;
+    src: url('fonts/roboto/roboto-v19-cyrillic_latin-500.eot'); /* IE9 Compat Modes */
+    src: local('Roboto Medium'), local('Roboto-Medium'),
+         url('fonts/roboto/roboto-v19-cyrillic_latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/roboto/roboto-v19-cyrillic_latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/roboto/roboto-v19-cyrillic_latin-500.woff') format('woff'), /* Modern Browsers */
+         url('fonts/roboto/roboto-v19-cyrillic_latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/roboto/roboto-v19-cyrillic_latin-500.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+ 
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: auto;
+    src: url('fonts/roboto/roboto-v19-cyrillic_latin-700.eot'); /* IE9 Compat Modes */
+    src: local('Roboto Bold'), local('Roboto-Bold'),
+         url('fonts/roboto/roboto-v19-cyrillic_latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/roboto/roboto-v19-cyrillic_latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/roboto/roboto-v19-cyrillic_latin-700.woff') format('woff'), /* Modern Browsers */
+         url('fonts/roboto/roboto-v19-cyrillic_latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/roboto/roboto-v19-cyrillic_latin-700.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'lg';
+    src: url("fonts/lg.eot?n1z373");
+    src: url("fonts/lg.eot?#iefixn1z373") format("embedded-opentype"), url("fonts/lg.woff?n1z373") format("woff"), url("fonts/lg.ttf?n1z373") format("truetype"), url("fonts/lg.svg?n1z373#lg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: auto;
+}
+
+/*----------------------------------------*/
+/*  01. Theme default CSS
+/*----------------------------------------*/
+
+/*-- Google Font --*/
+// @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800');
+
+/*-- Common Style --*/
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body{
+    background-color: $body-color;
+    line-height: 26px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    visibility: visible;
+    font-family: $poppins;
+    color: $dark;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: $heading-color;
+    font-family: $poppins;
+    font-weight: 400;
+    margin-top: 0;
+}
+h1 {
+    line-height: 1;
+    font-weight: 700;
+}
+h2 {
+    font-size: 30px;
+    line-height: 36px;
+}
+h3 {
+    font-size: 24px;
+    line-height: 30px;
+}
+h4 {
+    font-size: 18px;
+    line-height: 24px;
+}
+h5 {
+    font-size: 14px;
+    line-height: 18px;
+}
+h6 {
+    font-size: 12px;
+    line-height: 14px;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+p{
+    font-family: $poppins;
+}
+a, button {
+    color: inherit;
+    display: inline-block;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+a, button, img, input, span {
+    transition: all 0.3s ease 0s;
+}
+*:focus {
+    outline: none !important;
+}
+a:focus {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+    color: $theme-color;
+}
+button, input[type="submit"] {
+    cursor: pointer;
+}
+img {max-width:100%;height:auto}
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.border-top {
+    border-top: 1px solid #f1f1f1;
+}
+/*-- 
+    - Common Classes
+-----------------------------------------*/
+.fix {
+    overflow:hidden
+}
+.hidden {
+    display: none;
+}
+.clear{
+    clear: both;
+}
+@media #{$large-mobile}{
+    .container {
+        width: 450px;
+    }
+}
+@media #{$small-mobile}{
+    .container {
+        width: 320px;
+    }
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.container-fluid {
+    max-width: 1830px;
+}
+.no-gutters > .col, .no-gutters > [class*="col-"] {
+	padding-right: 0;
+	padding-left: 0;
+    margin: 0;
+}
+.border-t-one {
+    border-top: 1px solid #e5e5e5;
+}
+
+/*-- 
+    - Background color
+-----------------------------------------*/
+.bg-white {
+    background-color: $white;
+}
+.bg-light-grey {
+    background-color: $light-grey;
+}
+.bg-grey {
+    background: $grey;
+}
+.bg-black {
+    background: $bg-black
+}
+
+
+/*-- 
+    - color
+-----------------------------------------*/
+.c-blue {
+    color: $theme-color;
+}
+
+/*-- 
+    - Input Placeholder
+-----------------------------------------*/
+input:-moz-placeholder, textarea:-moz-placeholder {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+/*-- 
+    Scroll Up 
+-----------------------------------------*/
+#scrollUp {
+    width: 40px;
+    height: 40px;
+    background-color: $theme-color;
+    color: $white;
+    right: 20px;
+    bottom: 60px;
+    text-align: center;
+    overflow: hidden;
+    & i {
+        display: block;
+        line-height: 40px;
+        font-size: 24px;
+    }
+    &:hover i {
+        animation-name: fadeInUp;
+        animation-duration:1s;
+        animation-fill-mode:both;
+        animation-iteration-count: infinite;
+    }
+}
+
+/*-- 
+    - Main Wrapper
+-----------------------------------------*/
+.main-wrapper {
+    &.header-transparent {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+}
+/*-- 
+    - Section Padding
+-------------------------------------*/
+// Padding Top Bottom 
+.section-ptb {
+    padding: 100px 0;
+    
+    @media #{$desktop-device} {
+        padding: 80px 0;
+    }
+    @media #{$tablet-device} {
+        padding: 80px 0;
+    }
+    @media #{$large-mobile} {
+        padding: 70px 0;
+    }
+    @media #{$small-mobile} {
+        padding: 60px 0;
+    }
+}
+.section-pt-70 {
+    padding-top: 70px;
+    
+    @media #{$desktop-device} {
+        padding-top: 50px 0;
+    }
+    @media #{$tablet-device} {
+        padding-top: 50px 0;
+    }
+    @media #{$large-mobile} {
+        padding-top: 40px 0;
+    }
+    @media #{$small-mobile} {
+        padding-top: 30px 0;
+    }
+}
+// Section Padding Top
+.section-pt {
+    padding-top: 100px;
+    
+    @media #{$desktop-device} {
+        padding-top: 80px;
+    }
+    @media #{$tablet-device} {
+        padding-top: 80px;
+    }
+    @media #{$large-mobile} {
+        padding-top: 70px;
+    }
+    @media #{$small-mobile} {
+        padding-top: 60px;
+    }
+}
+.section-pt-70 {
+    padding-top: 70px;
+    
+    @media #{$desktop-device} {
+        padding-top: 50px;
+    }
+    @media #{$tablet-device} {
+        padding-top: 50px;
+    }
+    @media #{$large-mobile} {
+        padding-top: 40px;
+    }
+    @media #{$small-mobile} {
+        padding-top: 30px;
+    }
+}
+// Section Padding Bottom
+.section-pb {
+    padding-bottom: 100px;
+    
+    @media #{$desktop-device} {
+        padding-bottom: 80px;
+    }
+    @media #{$tablet-device} {
+        padding-bottom: 80px;
+    }
+    @media #{$large-mobile} {
+        padding-bottom: 70px;
+    }
+    @media #{$small-mobile} {
+        padding-bottom: 60px;
+    }
+}
+.section-pb-70 {
+    padding-bottom: 70px;
+    
+    @media #{$desktop-device} {
+        padding-bottom: 50px;
+    }
+    @media #{$tablet-device} {
+        padding-bottom: 50px;
+    }
+    @media #{$large-mobile} {
+        padding-bottom: 40px;
+    }
+    @media #{$small-mobile} {
+        padding-bottom: 30px;
+    }
+}
+
+/*-- Margin top --*/
+@for $i from 1 through 20 {
+    .mt--#{5 * $i} {
+        margin-top: 5px *$i;
+    }
+}
+
+/*-- Margin Bottom --*/
+@for $i from 1 through 20 {
+    .mb--#{5 * $i} {
+        margin-bottom: 5px *$i;
+    }
+}
+
+/*-- padding top --*/
+@for $i from 1 through 20 {
+    .pt--#{5 * $i} {
+        padding-top: 5px *$i;
+    }
+}
+
+/*-- padding Bottom --*/
+@for $i from 1 through 20 {
+    .pb--#{5 * $i} {
+        padding-bottom: 5px *$i;
+    }
+}
+.plr-40 {
+    padding: 0 40px;
+    @media #{$tablet-device} {
+        padding: 0 30px;
+    }
+    @media #{$large-mobile} {
+        padding: 0 15px;
+    }
+    @media #{$small-mobile} {
+        padding: 15px;
+    }
+}
+.plr-30 {
+    padding: 0 30px;
+    @media #{$large-mobile} {
+        padding: 0 15px;
+    }
+    @media #{$small-mobile} {
+        padding: 15px;
+    }
+}
+
+// container-box
+
+body {
+    &.box-body {
+        background: $grey;
+    }
+}
+.container-box {
+    max-width: 1251px;
+    position: relative;
+    background: #fff;
+    margin: 0 auto;
+}
+.container-box-inner {
+  padding: 40px 0; 
+  margin: 0 0 -40px 0;
+}
+
+
+/*--
+    - Section Title Css
+-------------------------------*/
+.section-title {
+    background: url(../images/icon/title-bg.png) 50% 100% no-repeat;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-bottom: 60px;
+    & h2 {
+        font-size: 34px;
+        margin-top: -4px;
+        font-weight: 400;
+        margin-bottom: 8px;
+        @media #{$large-mobile}{
+            font-size: 26px;
+        }
+    }
+}
+.section-bg-2 {
+    background: url(../images/icon/title-bg-2.png) 50% 100% no-repeat;
+}
+.section-bg-3 {
+    background: url(../images/icon/title-bg-3.png) 50% 100% no-repeat;
+}
+// section-title-two css
+.section-title-two {
+    & h2 {
+        margin-top: -4px;
+        margin-bottom: 8px;
+        font-size: 34px;
+    }
+}
+// section-title-three css
+.section-title-three {
+    text-align: left;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: "";
+        border-bottom: 1px dotted #000;
+        width: 100%;
+        left: 0;
+        top: 50%;
+        transform: translateY(50%);
+    }
+    & h3 {
+        font-size: 22px;
+        padding-left: 0;
+        margin-bottom: 0;
+        background: #fff;
+        padding-right: 15px;
+        display: inline-block;
+        position: relative;
+        z-index: 9;
+    }
+    
+}
+
+// section-title-four css
+
+.section-titele-four {
+    & .section-titele-four-inner {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 10px;
+        @media #{$large-mobile}{
+            flex-direction: column;
+        }
+        & h2 {
+            font-size: 30px;
+            margin-top: -4px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            @media #{$large-mobile}{
+                font-size: 26px;
+            }
+        }
+        & .tabs-categorys-list-two {
+            margin-top: 8px;
+            @media #{$large-mobile}{
+                margin-bottom: 8px;
+            }
+            & ul {
+                & li {
+                    padding: 0 20px;
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                    &:first-child {
+                        padding-left: 0;
+                    }
+                    & a {
+                        
+                    }
+                    @media #{$large-mobile}{
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sidebar-content-title {
+    & h3 {
+        border-top: none;
+        margin-bottom: 40px;
+        font-size: 24px;
+        text-align: left;
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 14px;
+        @media #{$desktop-device}{
+            font-size: 20px;
+        }
+        @media #{$large-mobile}{
+            font-size: 22px;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+// Color variables -->
+$primary:             #229ac8;
+$secondary:           #ff6f14;
+
+$text:                #222;
+$error:               #ec3f41;
+$success:             #3a7d34;
+$green:               #34BB54;
+$orange:              #ff6f14;
+$hover_orange:        #ea5b00;
+$blue:                #032b79;
+$shadow:              #dbd6e9;
+$grey_heading:        #545454;
+$grey_text:           #858585;
+$light_grey:          #8C8C8C;
+$border_color:        #EBEBEB;  
+$border_color_darker: #d2d2d2;
+$disabled:            #6c757d;
+$icon_grey:           #969696;
+$placeholder:         #757575;
+$text_grey:           #7e7e7e;
+$grey_bg:             #f4f4f4;
+$bg_grey:             #f4f4f4;
+$bg_dark:             #393939;
+
+// Font Family
+$poppins: 'Poppins', sans-serif;
+
+// Colors ---------------
+$white: #ffffff;
+$black: #000000;
+
+// Light Color
+$light: #191919;
+$light-grey: #f6fafb;
+
+// Dark Color
+$dark: #191919;
+$dark-grey: #222222;
+
+// Body Color
+$body-color: #fff;
+$body-color-light: #909090;
+
+// Body Color
+$grey-light: #F6F6F6;
+$grey-dark: #e4e4e4;
+$grey: #F6F6F6;
+$bg-black: #1D1D1D;
+
+// Heading Color
+$heading-color: #383838;
+$heading-color-light: #505050;
+
+// Theme Color
+$theme-color: #8a8f6a; 
+
+
+////// Font variables ---> //////
+$font-size--base: 16px;
+$font-size__coefficient--xs: .85;
+$font-size__coefficient--s:  1;
+$font-size__coefficient--m:  1.5;
+$font-size__coefficient--l:  1.75;
+$font-size__coefficient--xl: 2;
+
+$font-size--xs: round($font-size--base * $font-size__coefficient--xs);
+$font-size--s: round($font-size--base * $font-size__coefficient--s);     // 16px
+$font-size--m: round($font-size--base * $font-size__coefficient--m);     // 24px
+$font-size--l: round($font-size--base * $font-size__coefficient--l);     // 28px
+$font-size--xl: round($font-size--base * $font-size__coefficient--xl);   // 40px
+
+$line-height--base: 1.428571429;
+$line-height--computed: round($font-size--base * $line-height--base);
+$line-height--s: floor($line-height--computed * $font-size__coefficient--s);    // 23px
+$line-height--m: floor($line-height--computed * $font-size__coefficient--m);    // 35px
+$line-height--l: floor($line-height--computed * $font-size__coefficient--l);    // 35px
+$line-height--xl: floor($line-height--computed * $font-size__coefficient--xl);  // 55px
+
+$normal-letter-spacing: normal;
+
+// Primary font
+$font-family__primary: 'Poppins', sans-serif;
+$font-weight__primary__regular: 400;
+$font-weight__primary__bold: 600;
+
+// Secondary font
+$font-family__secondary: 'Roboto', sans-serif;
+$font-weight__secondary__regular: 300;
+$font-weight__secondary__normal: 600;
+$font-weight__secondary__bold: 700;
+
+// Responsive Variables
+$extraBig-device : 'only screen and (min-w idth: 1600px)';
+$laptop-device : 'only screen and (min-width: 1200px) and (max-width: 1600px)';
+$desktop-device : 'only screen and (min-width: 992px) and (max-width: 1200px)';
+$tablet-device:'only screen and (min-width: 768px) and (max-width: 991px)';
+$large-mobile:'only screen and (max-width: 767px)';
+$small-mobile: 'only screen and (max-width: 479px)';
+
+
