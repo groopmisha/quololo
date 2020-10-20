@@ -605,82 +605,55 @@ $(document).delegate('.agree', 'click', function(e) {
         ]
     });
     
-    /*--
-        Sidebar single active Slider
-    -----------------------------------*/
-    $('.sidebar-single-active').slick({
-        accessibility: false,
-        dots: false,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        prevArrow:true,
-        nextArrow: true,
-        prevArrow: '<button type="button" class="slick-prev"> <i class="fa fa-angle-left"></i> </button>',
-        nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>',
-        responsive: [
-            {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 1,
-                }
-            },
-            {
-                breakpoint: 479,
-                settings: {
-                    slidesToShow: 1,
-                }
-            }
-        ]
-    });
-    
-    /*--
-        Product Slider
-    -----------------------------------*/
-    $('.product-slider').slick({
-        dots: false,
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: false,
-        prevArrow:true,
-        nextArrow: true,
-        prevArrow: '<button type="button" class="slick-prev"> <i class="fa fa-angle-left"></i> </button>',
-        nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>',
-        responsive: [
-            {
-                breakpoint: 1199,
-                settings: {
-                    slidesToShow: 3,
-                }
-            },
-            {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 479,
-                settings: {
-                    slidesToShow: 1,
-                }
-            }
-        ]
-    });
+
+	let LatestSlider = new Swiper('.latest-slider', {
+		autoHeight: false,
+		mode: 'horizontal',
+        slidesPerView: 4,
+        slidesPerColumn: 2,
+        spaceBetween: 10,
+        slidesPerColumnFill: 'row',
+		preloadImages: false,
+		lazyLoading:  true,
+		lazyLoadingInPrevNext: true,
+		watchSlidesVisibility: true,
+		lazyLoadingInPrevNextAmount: 4,
+		pagination: '.latest-slider .swiper-pagination',
+		paginationClickable: true,
+		dynamicBullets: false,
+		nextButton: '.latest-slider .swiper-button-next',
+		prevButton: '.latest-slider .swiper-button-prev',
+		spaceBetween: 30,
+		autoplay: false,
+		autoplayDisableOnInteraction: true,
+		loop: true,
+		breakpoints: {
+			475: {
+				slidesPerView: 2,
+				slidesPerColumn: 1,
+				spaceBetween: 10,
+				slidesPerColumnFill: 'row'
+			},
+			768: {
+				slidesPerView: 2,
+				slidesPerColumn: 2,
+				spaceBetween: 10,
+				slidesPerColumnFill: 'row'
+			},
+			920: {
+                slidesPerView: 2,
+				slidesPerColumn: 2,
+				spaceBetween: 10,
+				slidesPerColumnFill: 'row'
+			},
+			1200: {
+                slidesPerView: 4,
+				slidesPerColumn: 2,
+				spaceBetween: 10,
+				slidesPerColumnFill: 'row'
+			}
+		}
+	});
     /*--
         Product show 3 Slider
     -----------------------------------*/

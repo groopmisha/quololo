@@ -46,7 +46,7 @@
     &__primary {
         display: inline-flex;
         padding: 12px 30px;
-        background-color: $primary;
+        background-color: $secondary;
         color: $white;
         font-size: 1rem;
         font-weight: 500;
@@ -59,7 +59,7 @@
 
         &:hover,
         &:focus {
-            background-color: $hover_orange;
+            background-color: $secondary_hover;
             color: $white;
             outline: 0;
             transition: all 300ms ease-in;
@@ -76,7 +76,7 @@
 
         &--outline {
             padding: 12px 30px;
-            color: $primary;
+            color: $secondary;
             font-size: 1rem;
             font-weight: 500;
             text-align: center;
@@ -84,7 +84,7 @@
             display: inline-flex;
             text-decoration: none;
             border-radius: 3px;
-            box-shadow: inset 0 0 0 1px $primary;
+            box-shadow: inset 0 0 0 1px $secondary;
             border: none;
             background-color: transparent;
             transition: all 300ms ease;

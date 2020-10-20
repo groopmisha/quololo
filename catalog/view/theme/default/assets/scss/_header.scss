@@ -713,7 +713,7 @@
                 top: 5px;
                 left: 5px;
                 border-radius: 100%;
-                background: $theme-color;
+                background: $accent;
                 color: $white;
                 height: 20px;
                 width: 20px;
@@ -758,17 +758,16 @@
             padding-top: 15px;
 
             a {
-                background: $white;
+                background: $secondary;
                 font-weight: 400;
-                color: #323232;
+                color: $white;
                 display: inline-block;
                 padding: 5px 20px;
                 font-size: 14px;
-                border: 1px solid $border_color_darker;
+                border: none;
 
                 &:hover {
-                    background: $theme-color;
-                    color: $white;
+                    background: $secondary_hover;
                 }
             }
         }
@@ -1085,17 +1084,20 @@ div.required .control-label:before {
 	border-color: #dddddd #dddddd #b3b3b3 #b7b7b7;
 }
 .btn-primary {
-	color: #ffffff;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	background-color: #229ac8;
-	background-image: linear-gradient(to bottom, #23a1d1, #1f90bb);
-	background-repeat: repeat-x;
-	border-color: #1f90bb #1f90bb #145e7a;
+	color: $white;
+	background-color: $secondary;
+	border: none;
 }
 .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
-	background-color: #1f90bb;
-	background-position: 0 -15px;
+    background-color: $secondary_hover;
+    border: none;
 }
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    background-color: $secondary_hover;
+    border:none;
+}
+
 .btn-warning {
 	color: #ffffff;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
