@@ -38,82 +38,80 @@
 {% endfor %}
 </head>
 
-<body class="box-body">
+<body>
 
-    <div class="container-box">
-
-        <header class="header">
-            <div class="header-top bg-grey">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 order-lg-1 col-md-5 order-1">
-                            <div class="top-selector-wrapper">
-                                <div class="single-top-selector-left">
-                                    {{ currency }}
-                                    {{ language }}
-                                </div>
+    <header class="header">
+        <div class="header-top bg-grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 order-lg-1 col-md-5 order-1">
+                        <div class="top-selector-wrapper">
+                            <div class="single-top-selector-left">
+                                {{ currency }}
+                                {{ language }}
                             </div>
                         </div>
-                        <div class="col-lg-4 order-lg-2 col-md-12">
-                            <div class="logo text-center">
-                                {% if logo %}
-                                <a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>
-                                {% else %}
-                                <h1><a href="{{ home }}">{{ name }}</a></h1>
-                                {% endif %}
-                            </div>
+                    </div>
+                    <div class="col-lg-4 order-lg-2 col-md-12">
+                        <div class="logo text-center">
+                            {% if logo %}
+                            <a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>
+                            {% else %}
+                            <h1><a href="{{ home }}">{{ name }}</a></h1>
+                            {% endif %}
                         </div>
-                        <div class="col-lg-4 order-lg-3 col-lg-4 col-md-7 order-2">
-                            <div class="header-bottom-right">
-                                <ul class="single-setting-selector">
-                                    <li class="setting-top list-inline-item">
-                                        <div class="btn-group dropdown">
-                                            <button class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle-o"></i> Setting <i class="fa fa-angle-down"></i></button>
-                                            <ul class="dropdown-menu dropdown-menu-left">
-                                                {% if logged %}
-                                                <li><a href="{{ account }}">{{ text_account }}</a></li>
-                                                <li><a href="{{ order }}">{{ text_order }}</a></li>
-                                                <li><a href="{{ transaction }}">{{ text_transaction }}</a></li>
-                                                <li><a href="{{ download }}">{{ text_download }}</a></li>
-                                                <li><a href="{{ logout }}">{{ text_logout }}</a></li>
-                                                {% else %}
-                                                <li><a href="{{ register }}">{{ text_register }}</a></li>
-                                                <li><a href="{{ login }}">{{ text_login }}</a></li>
-                                                {% endif %}
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="block-search">
-                                    <div class="trigger-search"><i class="fa fa-search"></i> <span>Search</span></div>
-                                    {{ search }}
-                                </div>
-                                <div class="shoping-cart">
-                                    {{ cart }}
-                                </div>
+                    </div>
+                    <div class="col-lg-4 order-lg-3 col-lg-4 col-md-7 order-2">
+                        <div class="header-bottom-right">
+                            <ul class="single-setting-selector">
+                                <li class="setting-top list-inline-item">
+                                    <div class="btn-group dropdown">
+                                        <button class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle-o"></i> Setting <i class="fa fa-angle-down"></i></button>
+                                        <ul class="dropdown-menu dropdown-menu-left">
+                                            {% if logged %}
+                                            <li><a href="{{ account }}">{{ text_account }}</a></li>
+                                            <li><a href="{{ order }}">{{ text_order }}</a></li>
+                                            <li><a href="{{ transaction }}">{{ text_transaction }}</a></li>
+                                            <li><a href="{{ download }}">{{ text_download }}</a></li>
+                                            <li><a href="{{ logout }}">{{ text_logout }}</a></li>
+                                            {% else %}
+                                            <li><a href="{{ register }}">{{ text_register }}</a></li>
+                                            <li><a href="{{ login }}">{{ text_login }}</a></li>
+                                            {% endif %}
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="block-search">
+                                <div class="trigger-search"><i class="fa fa-search"></i> <span>Search</span></div>
+                                {{ search }}
+                            </div>
+                            <div class="shoping-cart">
+                                {{ cart }}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="header-bottom-area bg-grey header-sticky">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 d-none d-lg-block">
-                            <div class="main-menu-area text-center">
-                            {{ menu }}
-                            </div>
+        <div class="header-bottom-area bg-grey header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 d-none d-lg-block">
+                        <div class="main-menu-area text-center">
+                        {{ menu }}
                         </div>
-                        <div class="col">
-                            <!-- mobile-menu start -->
-                            <div class="mobile-menu d-block d-lg-none"></div>
-                            <!-- mobile-menu end -->
-                        </div>
+                    </div>
+                    <div class="col">
+                        <!-- mobile-menu start -->
+                        <div class="mobile-menu d-block d-lg-none"></div>
+                        <!-- mobile-menu end -->
                     </div>
                 </div>
             </div>
+        </div>
 
-        </header>
+    </header>
 
 

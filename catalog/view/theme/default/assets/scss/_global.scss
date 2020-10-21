@@ -102,9 +102,6 @@
 /*  01. Theme default CSS
 /*----------------------------------------*/
 
-/*-- Google Font --*/
-// @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800');
-
 /*-- Common Style --*/
 *, *::after, *::before {
   box-sizing: border-box;
@@ -113,7 +110,7 @@ html, body {
     height: 100%;
 }
 body{
-    background-color: $body-color;
+    background: $grey;
     line-height: 26px;
     font-size: 14px;
     font-style: normal;
@@ -122,8 +119,10 @@ body{
     font-family: $poppins;
     color: $dark;
 
-    &.box-body {
-        background-color: $grey;
+    & > .container {
+        background-color: $white;
+        padding: 2rem;
+        margin-bottom: 2rem;
     }
 }
 h1, h2, h3, h4, h5, h6 {
@@ -287,7 +286,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 #scrollUp {
     width: 40px;
     height: 40px;
-    background-color: $primary;
+    background-color: $secondary;
     color: $white;
     right: 20px;
     bottom: 60px;
@@ -467,22 +466,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     }
 }
 
-// container-box
-
-body {
-    &.box-body {
-        background: $grey;
-    }
-}
-.container-box {
-    max-width: 1251px;
-    position: relative;
-    background: #fff;
-    margin: 0 auto;
-}
 .container-box-inner {
-  padding: 40px 0; 
-  margin: 0 0 -40px 0;
+    padding: 40px;
 }
 
 
@@ -606,5 +591,24 @@ body {
         @media #{$large-mobile}{
             font-size: 22px;
         }
+    }
+}
+
+.nav-tabs {
+
+    li {
+        margin: 1rem;
+
+        a {
+            color: $primary;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    & + .tab-content {
+        padding-top: 1rem;
     }
 }

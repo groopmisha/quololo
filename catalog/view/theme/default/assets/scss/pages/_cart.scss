@@ -71,6 +71,7 @@
         label {
             font-size: 14px;
             cursor: pointer;
+            margin-bottom: 0;
         }
 
         a {
@@ -448,13 +449,19 @@
         #{$form}__submit {
             flex: 1;
             max-width: min-content;
-            padding: 0 .5rem;
-            height: 34px;
+            padding: 0 1rem;
+            height: 38px;
             margin-left: .5rem;
+            font-size: 14px;
 
             &:focus {
                 outline: 0;
                 box-shadow: none;
+            }
+
+            &:hover {
+                background-color: transparent;
+                color: $primary;
             }
         }
     }
@@ -545,7 +552,7 @@
 
             label {
                 color: $grey_text;
-                font-size: 14px;
+                font-size: 13px;
                 margin-bottom: .3rem;
 
                 &:before {

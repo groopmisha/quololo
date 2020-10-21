@@ -1,0 +1,59 @@
+<section class="block-slider block-slider--hero">
+	<div class="swiper-container swiper-slider" data-loop="{{ loop }}" data-autoplay="{{ autoplay }}" data-height="{{ height ~ 'px' }}" data-min-height="{{ min_height ~ 'px' }}" data-slide-effect="{{ effect }}"data-slide-speed="{{ speed ~ 'ms' }}" data-keyboard="{{ keyboard_control }}" data-mousewheel="{{ mousewheel_control }}"data-mousewheel-release="{{ mousewheel_release_on_edges }}" style="height: {{ height ~ 'px;' }}">
+		<ul class="swiper-wrapper">
+			{% if (slides is defined and slides) %}
+			{% for slide in slides %}
+				{% if (slide['slide_type']) %}
+					<li class="swiper-slide" data-vide-bg="{{ slide['video'] }}"
+					data-vide-options="playbackRate: {{ slide['video_playback_rate'] }}, autoplay: {{ slide['video_autoplay'] }},
+					loop: {{ slide['video_loop'] }}, {{ slide['video_muted'] ? '' : 'volume: ' ~ slide['video_volume'] ~ ',' }}
+					muted: {{ slide['video_muted'] }}">
+					{% if (slide['link']) %}
+						<a href="{{ slide['link'] }}" class="swiper-slide__link">
+							{{ slide['description'] }}
+						</a>
+					{% else %}
+						{{ slide['description'] }}
+					{% endif %}
+					</li>
+				{% else %}
+					<li class="swiper-slide" data-slide-bg="{{ slide['image'] }}">
+						<div class="swiper-slide-info">
+							{% if (slide['link_text']) %}
+								<a class="swiper-slide-description" href="{{ slide['link_text'] }}">
+									{{ slide['description'] }}
+								</a>
+							{% else %}
+								<div class="swiper-slide-description">
+									{{ slide['description'] }}
+								</div>
+							{% endif %}
+							{% if (slide['link1']) %}
+								<a href="{{ slide['link1'] }}" class="swiper-slide-link">{{ slide['title_link1'] }}</a>
+						    {% endif %}
+						</div>
+					</li>
+				{% endif %}
+			{% endfor %}
+			{% endif %}
+		</ul>
+		<div class="swiper-controls pager">
+			<div class="swiper-pager">
+				{% if (prev_button) %}
+				<div class="swiper-btn swiper-button-prev"></div>
+				{% endif %}
+				{% if (next_button) %}
+				<div class="swiper-btn swiper-button-next"></div>
+				{% endif %}
+			</div>
+		</div>
+		<div class="swiper-controls pagin">
+			{% if (pagination) %}
+			<div class="swiper-pagination" data-index-bullet="{{ pagination_bullet_render }}" data-clickable="{{ pagination_clickable }}"></div>
+			{% endif %}
+		</div>
+		{% if (scrollbar and loop == "false") %}
+		<div class="swiper-scrollbar" data-draggable="{{ scrollbar_draggable }}"></div>
+		{% endif %}
+	</div>	
+</section>

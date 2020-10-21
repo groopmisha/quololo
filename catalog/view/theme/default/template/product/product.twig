@@ -116,12 +116,12 @@
         {% set class = 'col-sm-4' %}
         {% endif %}
         <div class="{{ class }}">
-          <div class="btn-group">
+          <div class="btn-group mb-2">
             <button type="button" data-toggle="tooltip" class="btn btn-default" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product_id }}');"><i class="fa fa-heart"></i></button>
             <button type="button" data-toggle="tooltip" class="btn btn-default" title="{{ button_compare }}" onclick="compare.add('{{ product_id }}');"><i class="fa fa-exchange"></i></button>
           </div>
-          <h1>{{ heading_title }}</h1>
-          <ul class="list-unstyled">
+          <h1 class="mb-4 mt-4" >{{ heading_title }}</h1>
+          <ul class="list-unstyled mb-4">
             {% if manufacturer %}
             <li>{{ text_manufacturer }} <a href="{{ manufacturers }}">{{ manufacturer }}</a></li>
             {% endif %}

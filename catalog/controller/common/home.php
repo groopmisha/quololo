@@ -12,6 +12,35 @@ class ControllerCommonHome extends Controller {
 			$this->document->addLink($this->config->get('config_url'), 'canonical');
 		}
 
+
+		// Menu
+		$this->load->model('catalog/category');
+		$this->load->model('catalog/product');
+		$this->load->model('tool/image');
+
+		$data['categories'] = array();
+
+		$categories = $this->model_catalog_category->getCategories(0);
+
+		foreach ($categories as $category) {
+
+			if ($category['image']) {
+				$image = $this->model_tool_image->resize($category['image'], 377, 230);
+			} else {
+				$image = $data['thumb'] = $this->model_tool_image->resize('no_image.jpg', 377, 230);					
+			}
+
+			if ($category['top']) {
+
+				$data['categories'][] = array(
+					'name'     => $category['name'],
+					'image'    => $image,
+					'column'   => $category['column'] ? $category['column'] : 1,
+					'href'     => $this->url->link('product/category', 'path=' . $category['category_id'])
+				);
+			}
+		}
+
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');

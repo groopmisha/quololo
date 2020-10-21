@@ -1,6 +1,8 @@
-/*--
-    03. Header-top Css
---------------------------------------*/
+.header {
+    max-width: 1251px;
+    margin: 0 auto;
+}
+
 .header-top {
     padding: 20px 0 5px 0;
 
@@ -240,10 +242,11 @@
         }
     }
     @media #{$large-mobile}{
+        
         .header-bottom-right {
             padding-right: 60px;
             justify-content: space-between;
-            margin: 0px 0px 15px 0;
+            margin: 0px 0px 10px 0;
         }
         .container-box-inner {
             padding: 30px 0 20px 0;
@@ -560,7 +563,7 @@
         }
     }
     @media #{$tablet-device}{
-        margin: 30px 45px 30px 0;
+        margin: 30px 60px 30px 0;
     }
     @media #{$large-mobile}{
         margin: 20px 45px 0 0;
@@ -797,7 +800,7 @@
             top: -53px;
             color: #000;
             @media #{$tablet-device}{
-                top: -58px;
+                top: -62px;
             }
             @media #{$large-mobile}{
                 top: -48px;
@@ -1009,7 +1012,8 @@ div.required .control-label:before {
 .breadcrumb {
 	margin: 0 0 20px 0;
 	padding: 8px 0;
-	border: 1px solid #ddd;
+    border: 1px solid #ddd;
+    min-width: 100%;
 }
 .breadcrumb i {
 	font-size: 15px;
@@ -1208,7 +1212,8 @@ div.required .control-label:before {
 }
 .product-thumb .image img {
 	margin-left: auto;
-	margin-right: auto;
+    margin-right: auto;
+    padding: 1.5rem;
 }
 .product-grid .product-thumb .image {
 	float: none;
