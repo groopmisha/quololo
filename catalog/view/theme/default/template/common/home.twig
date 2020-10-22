@@ -76,3 +76,55 @@
 </div>
 
 {{ footer }}
+
+<script>
+	/* latest slider init ---> */
+	let LatestSlider = new Swiper('.latest-slider', {
+		autoHeight: false,
+		mode: 'horizontal',
+        slidesPerView: 4,
+        slidesPerColumn: 2,
+        spaceBetween: 10,
+        slidesPerColumnFill: 'row',
+		preloadImages: false,
+		lazyLoading:  true,
+		lazyLoadingInPrevNext: true,
+		watchSlidesVisibility: true,
+		lazyLoadingInPrevNextAmount: 4,
+		pagination: '.latest-slider .swiper-pagination',
+		paginationClickable: true,
+		dynamicBullets: false,
+		nextButton: '.latest-slider .swiper-button-next',
+		prevButton: '.latest-slider .swiper-button-prev',
+		spaceBetween: 30,
+		autoplay: false,
+		autoplayDisableOnInteraction: true,
+		loop: true,
+		breakpoints: {
+			475: {
+				slidesPerView: 2,
+				slidesPerColumn: 2,
+                spaceBetween: 30,
+				slidesPerColumnFill: 'row'
+			},
+			768: {
+				slidesPerView: 2,
+				slidesPerColumn: 2,
+                spaceBetween: 30,
+				slidesPerColumnFill: 'row'
+			},
+			920: {
+                slidesPerView: 2,
+				slidesPerColumn: 2,
+				spaceBetween: 30,
+				slidesPerColumnFill: 'row'
+			},
+			1200: {
+                slidesPerView: 4,
+				slidesPerColumn: 2,
+				spaceBetween: 30,
+				slidesPerColumnFill: 'row'
+			}
+		}
+	});
+</script>

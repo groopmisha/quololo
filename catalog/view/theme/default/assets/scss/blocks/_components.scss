@@ -526,6 +526,12 @@
     &:hover .price-box{
         transform: scale(0);
     }
+
+    &:hover .star_content {
+        @include media("<=500px") {
+            display: none;
+        }
+    }
 }
 .product-image {
     position: relative;

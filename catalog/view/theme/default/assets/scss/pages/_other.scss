@@ -1,7 +1,5 @@
 .page {
     $page: &;
-    display: flex;
-    flex-wrap: wrap;
     flex: 1;
     max-width: 1251px;
     position: relative;
@@ -16,6 +14,7 @@
 
     @include media("<=500px") {
         padding: 1rem;
+        margin: 1rem;
     }
 
     // Page wrap, the same as .container -->
@@ -27,9 +26,9 @@
     &__sidebar {
         display: flex;
         flex-wrap: wrap;
-        flex: 0 0 calc(16% + 15px);
-        max-width: calc(16% + 15px);
-        margin: 1rem 0;
+        flex: 0 0 20%;
+        max-width: 20%;
+        padding-right: 1rem;
         background-color: $white;
 
         & > div {
@@ -38,9 +37,8 @@
 
         & + #{$page}__content {
             display: block;
-            flex: 0 0 calc(84% - 15px);
-            max-width: calc(84% - 15px);
-            margin: 1rem 0;
+            flex: 0 0 80%;
+            max-width: 80%;
             padding-left: 1rem;
         }
 
@@ -79,14 +77,15 @@
         }
 
         @include media("<=tablet") {
-            flex: 0 0 calc(100% - 2rem);
-            max-width: calc(100% - 2rem);
+            flex: 0 0 100%;
+            max-width: 100%;
             margin: 1rem 1rem 0;
-            padding-left: 0;
+            padding: 0;
 
             & + #{$page}__content {
                 flex: 0 0 100%;
                 max-width: 100%;
+                padding: 0;
             }
         }
 
@@ -104,8 +103,6 @@
 
     // Page content wrap
     &__content {
-        display: flex;
-        flex-wrap: wrap;
 
         &--empty,
         &-wrap--empty {
@@ -158,137 +155,16 @@
             margin-bottom: 1rem;
         }
 
-        &-image {
-            max-width: 150px;
-            display: inline-flex;
-            align-self: center;
-            margin-left: 1rem;
-        }
-
         &-action {
             display: flex;
             padding-right: 0;
             flex-wrap: wrap;
         }
 
-        &--with-filter {
-            justify-content: space-between;
-
-            #{$heading}-title {
-                align-self: center;
-                margin-bottom: 0;
-                flex: 0 0 16.666667%;
-                max-width: 16.666667%;
-            }
-
-            .page__filter {
-                flex: 0 0 50%;
-                max-width: 50%;
-            }
-
-            .sort {
-                align-self: flex-start;
-                flex: 0 0 25.5%;
-                max-width: 25.5%;
-                justify-content: flex-end;
-                margin-left: 0;
-            }
-
-            @include media(">1900px") {
-
-                .sort {
-                    flex: 0 0 22.1%;
-                    max-width: 22.1%;
-                }
-            }
-
-            @include media("<=1368px") {
-
-                .sort {
-                    flex: 0 0 26.7%;
-                    max-width: 26.7%;
-                }
-            }
-
-            @include media("<=1281px") {
-
-                .sort {
-                    flex: 0 0 27.8%;
-                    max-width: 27.8%;
-                }
-            }
-
-            @include media("<=desktop") {
-
-                .sort {
-                    flex: 0 0 34.5%;
-                    max-width: 34.5%;
-                }
-
-                .page__filter {
-                    flex: 0 0 41.666667%;
-                    max-width: 41.666667%;
-                }
-            }
-
-            @include media("<=910px") {
-                flex-wrap: wrap;
-
-                #{$heading}-title {
-                    min-width: 100%;
-                    margin-bottom: 1rem;
-                }
-
-                .page__filter {
-                    flex: 0 0 45%;
-                    max-width: 45%;
-                    min-width: auto;
-                    margin: 0;
-                }
-
-                .sort {
-                    flex: 0 0 55%;
-                    max-width: 55%;
-                    min-width: auto;
-                }
-            }
-
-
-            @include media("<=580px") {
-
-                .page__filter {
-                    flex: 0 0 100%;
-                    max-width: 100%;
-                    margin-bottom: 1rem;
-                }
-
-                .sort {
-                    flex: 0 0 100%;
-                    max-width: 100%;
-                }
-            }
-        }
-
-        &--with-image {
-            justify-content: flex-start;
-            margin-top: 0;
-            flex-wrap: wrap;
-
-            #{$heading}-title {
-                margin-bottom: 0;
-            }
-
-            #{$heading}-image {
-                margin: 1rem;
-            }
-        }
 
         @include media("<=650px") {
             flex-wrap: wrap;
-
-            &-action {
-                margin-left: auto;
-            }
+            font-size: 1.5rem;
         }
 
         @include media("<=420px") {
@@ -299,10 +175,44 @@
         }
     }
 
+    &__filter {
+        display: flex;
+        flex-wrap: wrap;
+
+        &-item {
+            display: flex;
+            align-items: center;
+
+            label {
+                white-space: nowrap;
+                margin-bottom: 0;
+                margin-right: 1rem;
+            }
+
+            &--view {
+
+                button {
+                    margin-right: 1rem;
+                }
+            }
+
+            &--sort {
+                margin-left: auto;
+            }
+
+            &--limit {
+                margin-left: 2rem;
+            }
+        }
+    }
+
     // Page products wrapper -->
     &__products {
         min-width: 100%;
-        border-top: 1px solid $border_color;
+        display: flex;
+        margin: 0 -1rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
 
         &--empty {
             color: $grey_text;
@@ -351,26 +261,17 @@
 
     &--category {
         display: flex;
-
-        #{$page}__sidebar {
-            margin-top: 0;
-
-            & +  #{$page}__content {
-                margin-top: 0;
-            }
-        }
+        flex-wrap: wrap;
 
         #{$page}__heading {
-            flex-direction: column;
-            align-items: flex-start;
 
-            &-action {
-                min-width: 100%;
+            &-title {
+                margin-bottom: 2rem;
             }
         }
 
-        #{$page}__products {
-            margin-top: 2rem;
+        .block-product {
+            padding: 0 .75rem;
         }
 
         @include media("<=1141px") {
@@ -399,6 +300,7 @@
                 flex: 0 0 100%;
                 max-width: 100%;
                 margin: 0;
+                margin-bottom: 2rem;
             }
         }
 
