@@ -147,11 +147,17 @@
                 @include media("<=500px") {
                   
                     h1 {
-                        font-size: 26px;
+                        font-size: 24px;
+                        margin-bottom: 1rem;
+
+                        & + h1 {
+                            font-size: 20px;
+                        }
                     }
     
                     p {
                         font-size: 13px;
+                        margin-bottom: 1rem;
                     }
                 }
             }
@@ -426,6 +432,13 @@
     }
 }
 
+.block-rating {
+
+    &__link {
+        display: inline-flex;
+        margin-left: .5rem;
+    }
+}
 
 // product quantity input change (cart page, header cart,)
 .block-quantity {
@@ -466,6 +479,24 @@
 
         &--plus {
             color: $success;
+        }
+    }
+
+    @include media("<=600px") {
+        flex-direction: column-reverse;
+
+        &__input {
+            margin: 0 auto;
+        }
+    }
+
+    @include media("<=500px") {
+        flex-direction: row;
+        flex: 1;
+        max-width: none;
+
+        &__input {
+            margin: 0 1rem;
         }
     }
 }

@@ -204,6 +204,17 @@
                 margin-left: 2rem;
             }
         }
+
+        @include media("<tablet") {
+
+            &-item {
+                margin-bottom: 1rem;
+
+                label {
+                    flex: 0 0 30%;
+                }
+            }
+        }
     }
 
     // Page products wrapper -->
@@ -257,6 +268,10 @@
     &--home {
         margin-bottom: -40px;
         display: block;
+
+        @include media("<=500px") {
+            margin: 0;
+        }
     }
 
     &--category {
@@ -371,24 +386,9 @@
 
     &--cart {
 
-        #{$page}__content {
-            display: block;
-            padding-bottom: 1rem;
-        }
-
         @include media("<=1171px") {
-            width: 100%;
-        }
-
-        @include media("<=500px") {
-
-            #{$page}__content {
-                padding: 1rem 0 2rem;
-            }
-
-            #{$page}__buttons {
-               margin-bottom: 0;
-            }
+            padding: 1rem;
+            margin: 1rem;
         }
     }
 }

@@ -7,6 +7,8 @@ class ControllerCommonMenu extends Controller {
 		$this->load->model('catalog/category');
 
 		$this->load->model('catalog/product');
+		$data['about_us'] = $this->url->link('information/information', 'information_id=4', true);
+		$data['contact'] = $this->url->link('information/information', 'information_id=8', true);
 
 		$data['categories'] = array();
 
